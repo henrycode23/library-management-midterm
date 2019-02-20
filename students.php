@@ -13,7 +13,7 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-          <?php require_once "process/process_students.php"; ?>
+          <?php require_once "process/process_students_page.php"; ?>
 
         </div>
         <!-- /.container-fluid -->
