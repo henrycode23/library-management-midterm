@@ -2,7 +2,7 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
 <!-- Sidebar - Brand -->
-<a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+<a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
   <div class="sidebar-brand-icon rotate-n-15">
     <i class="fas fa-laugh-wink"></i>
   </div>
@@ -31,7 +31,7 @@
   <div id="collapseStudents" class="collapse" aria-labelledby="headingStudents" data-parent="#accordionSidebar">
     <div class="bg-white py-2 collapse-inner rounded">
       <h6 class="collapse-header">Manage Students:</h6>
-      <a class="collapse-item" href="students.php?page=add_student">Add Student</a>
+      <a class="collapse-item" href="students.php?page=add-student">Add Student</a>
       <a class="collapse-item" href="students.php">View Students</a>
     </div>
   </div>
@@ -49,7 +49,7 @@
   <div id="collapseBooks" class="collapse" aria-labelledby="headingBooks" data-parent="#accordionSidebar">
     <div class="bg-white py-2 collapse-inner rounded">
       <h6 class="collapse-header">Manage Books:</h6>
-      <a class="collapse-item" href="buttons.html">Add Book</a>
+      <a class="collapse-item" href="books.php?page=add-book">Add Book</a>
       <a class="collapse-item" href="books.php">View Books</a>
     </div>
   </div>

@@ -6,10 +6,10 @@
   }
 
   switch($page){
-    case 'add_student' :
+    case 'add-student' :
       include "includes/add_student.php";
       break;
-    case 'edit_student' :
+    case 'edit-student' :
       include "includes/edit_student.php";
       break;
     default:
