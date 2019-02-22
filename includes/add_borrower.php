@@ -1,4 +1,4 @@
-<?php require_once "process/process_add_student.php"; ?>
+<?php require_once "process/process_add_borrower.php"; ?>
 
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
@@ -27,19 +27,19 @@
               <form action="" method="post" class="user">
                 <div class="form-group row">
                   <div class="col-sm-12">
-                    <input type="text" name="student_name" class="form-control form-control-user" id="" placeholder="Student Name" required>
+                    <input type="text" name="borrower_student_name" class="form-control form-control-user" id="" placeholder="Student Name" required>
                   </div>
                 </div>
                 <div class="form-group row">
                   <div class="col-sm-12">
-                    <input type="text" name="book_name" class="form-control form-control-user" id="" placeholder="Book Name" required>
+                    <input type="text" name="borrower_book_name" class="form-control form-control-user" id="" placeholder="Book Name" required>
                   </div>
                 </div>
-                <div class="form-group row">
+                <!-- <div class="form-group row">
                   <div class="col-sm-12">
-                    <input type="text" name="book_date_borrowed" class="form-control form-control-user" id="" placeholder="Date Borrowed" required>
+                    <input type="date" name="date_borrowed" class="form-control form-control-user" id="" placeholder="Date Borrowed" required>
                   </div>
-                </div>
+                </div> -->
                 <div class="form-group row">
                   <div class="col-sm-12">
                     <input type="submit" name="save" class="btn btn-primary btn-user btn-block" id="" value="Save">

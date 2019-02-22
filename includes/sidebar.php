@@ -66,9 +66,9 @@
   </a>
   <div id="collapseBorrow" class="collapse" aria-labelledby="headingBorrow" data-parent="#accordionSidebar">
     <div class="bg-white py-2 collapse-inner rounded">
-      <h6 class="collapse-header">Manage Books:</h6>
-      <a class="collapse-item" href="buttons.html">Borrow Book</a>
-      <a class="collapse-item" href="cards.html">Borrowed Records</a>
+      <h6 class="collapse-header">Manage Borrowers:</h6>
+      <a class="collapse-item" href="borrow.php?page=add-borrower">Borrow Book</a>
+      <a class="collapse-item" href="borrow.php">Borrowed Records</a>
     </div>
   </div>
 </li>
