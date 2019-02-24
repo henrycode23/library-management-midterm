@@ -7,7 +7,7 @@
     
     $mysqli->query("DELETE FROM borrow WHERE id = $id") or die($mysqli->error());
     
-    $_SESSION['message'] = "<strong>Student has been deleted!</strong> <button type='button' class='close' data-dismiss='alert' aria-label='Close'> <span aria-hidden='true'>&times;</span> </button>";
+    $_SESSION['message'] = "<strong>Borrower has been deleted!</strong> <button type='button' class='close' data-dismiss='alert' aria-label='Close'> <span aria-hidden='true'>&times;</span> </button>";
     $_SESSION['msg_type'] = "danger";
 
   }
@@ -32,7 +32,7 @@
     $mysqli->query("UPDATE borrow SET borrower_student_name='$borrower_student_name', borrower_book_name='$borrower_book_name', date_borrowed='now()' WHERE id=$id") or
       die($mysqli->error());
 
-      $_SESSION['message'] = "<strong>Student has been updated!</strong> <button type='button' class='close' data-dismiss='alert' aria-label='Close'> <span aria-hidden='true'>&times;</span> </button>";
+      $_SESSION['message'] = "<strong>Borrower has been updated!</strong> <button type='button' class='close' data-dismiss='alert' aria-label='Close'> <span aria-hidden='true'>&times;</span> </button>";
       $_SESSION['msg_type'] = "success";
 
   }

@@ -56,7 +56,7 @@
             <td><?php echo $row['student_course']; ?></td>
             <td>
               <a href="students.php?page=edit-student&edit=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a>
-              <a href="students.php?delete=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a>
+              <a onclick="return confirm('Are you sure you want to delete?')" href="students.php?delete=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a>
             </td>
           </tr>
         <?php endwhile; ?>

@@ -32,6 +32,7 @@
             <th>Student Name</th>
             <th>Book Name</th>
             <th>Date Borrowed</th>
+            <th>Date Returned</th>
             <th>Action</th>
           </tr>
         </thead>
@@ -41,19 +42,31 @@
             <th>Student Name</th>
             <th>Book Name</th>
             <th>Date Borrowed</th>
+            <th>Date Returned</th>
             <th>Action</th>
           </tr>
         </tfoot>
         <tbody>
         <?php while($row = $result->fetch_assoc()): ?>
+        <?php
+        if($row['date_returned'] == 0000-00-00){
+          $not_returned = "NOT RETURNED";
+        } else{
+          $row['date_returned'];
+        }
+        ?>
           <tr>
             <td><?php echo $row['id']; ?></td>
             <td><?php echo $row['borrower_student_name']; ?></td>
             <td><?php echo $row['borrower_book_name']; ?></td>
             <td><?php echo $row['date_borrowed']; ?></td>
+          <?php if($row['date_returned'] == 0000-00-00): ?>
+            <td><?php echo $not_returned; ?></td>
+          <?php else: ?>
+            <td><?php echo $row['date_returned']; ?></td>
+          <?php endif; ?>
             <td>
-              <a href="borrow.php?page=edit-borrower&edit=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a>
-              <a href="borrow.php?delete=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a>
+              <a href="borrow.php?page=edit-borrower&edit=<?php echo $row['id']; ?>" class="btn btn-info">Return Book</a>
             </td>
           </tr>
         <?php endwhile; ?>

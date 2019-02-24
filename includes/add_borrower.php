@@ -8,7 +8,7 @@
 <?php if(isset($_SESSION['message'])): ?>
   <div class="alert alert-<?php echo $_SESSION['msg_type']; ?> alert-dismissible fade show" role="alert"> <!-- ECHO DYNAMIC MSG_TYPE - BOOTSTRAP SUCCES, DANGER, WARNING -->
     <?php
-      echo $_SESSION['message']; // ECHO DYNAMIC MESSAGE
+      echo $_SESSION['message'];
       unset($_SESSION['message']);
     ?>
   </div>
@@ -35,14 +35,19 @@
                     <input type="text" name="borrower_book_name" class="form-control form-control-user" id="" placeholder="Book Name" required>
                   </div>
                 </div>
-                <!-- <div class="form-group row">
-                  <div class="col-sm-12">
-                    <input type="date" name="date_borrowed" class="form-control form-control-user" id="" placeholder="Date Borrowed" required>
-                  </div>
-                </div> -->
                 <div class="form-group row">
                   <div class="col-sm-12">
-                    <input type="submit" name="save" class="btn btn-primary btn-user btn-block" id="" value="Save">
+                    <input type="hidden" name="date_borrowed" class="form-control form-control-user" id="" placeholder="Date Borrowed" required>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-12">
+                    <input type="hidden" name="date_returned" class="form-control form-control-user" id="" placeholder="Date Returned" required>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-12">
+                    <input type="submit" name="save" class="btn btn-primary btn-user btn-block" id="" value="Borrow">
                   </div>
                 </div>
               </form>

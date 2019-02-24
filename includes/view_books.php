@@ -56,7 +56,7 @@
             <td><?php echo $row['book_date_published']; ?></td>
             <td>
               <a href="books.php?page=edit-book&edit=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a>
-              <a href="books.php?delete=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a>
+              <a onclick="return confirm('Are you sure you want to delete?')" href="books.php?delete=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a>
             </td>
           </tr>
         <?php endwhile; ?>
