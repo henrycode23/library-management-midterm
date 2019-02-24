@@ -24,7 +24,7 @@
               <div class="text-center">
                 <h1 class="h4 text-gray-900 mb-4">Student Form</h1>
               </div>
-              <form action="" method="post" class="user">
+              <form action="" method="post" class="user" enctype="multipart/form-data">
                 <input type="hidden" name="id" value="<?php echo $id; ?>">
                 <div class="form-group row">
                   <div class="col-sm-12">

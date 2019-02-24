@@ -24,30 +24,37 @@
               <div class="text-center">
                 <h1 class="h4 text-gray-900 mb-4">Student Form</h1>
               </div>
-              <form action="" method="post" class="user">
+              <form action="" method="post" class="user" enctype="multipart/form-data">
                 <div class="form-group row">
                   <div class="col-sm-12">
-                    <input type="text" name="student_name" class="form-control form-control-user" id="" placeholder="Student Name" required>
+                    <input type="text" name="student_name" class="form-control form-control-user" placeholder="Student Name" required>
                   </div>
                 </div>
                 <div class="form-group row">
                   <div class="col-sm-12">
-                    <input type="number" name="student_age" class="form-control form-control-user" id="" placeholder="Age" required>
+                    <input type="number" name="student_age" class="form-control form-control-user" placeholder="Age" required>
                   </div>
                 </div>
                 <div class="form-group row">
                   <div class="col-sm-12">
-                    <input type="text" name="student_address" class="form-control form-control-user" id="" placeholder="Address" required>
+                    <input type="text" name="student_address" class="form-control form-control-user" placeholder="Address" required>
                   </div>
                 </div>
                 <div class="form-group row">
                   <div class="col-sm-12">
-                    <input type="text" name="student_course" class="form-control form-control-user" id="" placeholder="Course" required>
+                    <input type="text" name="student_course" class="form-control form-control-user" placeholder="Course" required>
                   </div>
                 </div>
                 <div class="form-group row">
                   <div class="col-sm-12">
-                    <input type="submit" name="save" class="btn btn-primary btn-user btn-block" id="" value="Save">
+                    <label for="student_image">Student Image
+                    <input type="file" name="student_image" class="form-control-file">
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-12">
+                    <input type="submit" name="save" class="btn btn-primary btn-user btn-block" value="Save">
                   </div>
                 </div>
               </form>

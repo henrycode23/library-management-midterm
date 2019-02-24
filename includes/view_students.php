@@ -29,6 +29,7 @@
         <thead>
           <tr>
             <th>Id</th>
+            <th>Profile Picture</th>
             <th>Student Name</th>
             <th>Age</th>
             <th>Address</th>
@@ -39,6 +40,7 @@
         <tfoot>
           <tr>
             <th>Id</th>
+            <th>Profile Picture</th>
             <th>Student Name</th>
             <th>Age</th>
             <th>Address</th>
@@ -50,6 +52,7 @@
         <?php while($row = $result->fetch_assoc()): ?>
           <tr>
             <td><?php echo $row['id']; ?></td>
+            <td><a href="img/<?php echo $row['student_image']; ?>" target="_blank"><img src="img/<?php echo $row['student_image']; ?>" width="50" height="50"></a></td>
             <td><?php echo $row['student_name']; ?></td>
             <td><?php echo $row['student_age']; ?></td>
             <td><?php echo $row['student_address']; ?></td>

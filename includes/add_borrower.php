@@ -24,7 +24,7 @@
               <div class="text-center">
                 <h1 class="h4 text-gray-900 mb-4">Student's Borrower Form</h1>
               </div>
-              <form action="" method="post" class="user">
+              <form action="" method="post" class="user" enctype="multipart/form-data">
                 <div class="form-group row">
                   <div class="col-sm-12">
                     <input type="text" name="borrower_student_name" class="form-control form-control-user" id="" placeholder="Student Name" required>

@@ -49,11 +49,8 @@
         <tbody>
         <?php while($row = $result->fetch_assoc()): ?>
         <?php
-        if($row['date_returned'] == 0000-00-00){
-          $not_returned = "NOT RETURNED";
-        } else{
-          $row['date_returned'];
-        }
+          $not_returned = "<p style='color: #E02D1B;'>NOT RETURNED</p>";
+          $returned = "<p style='color: #2C9FAF;'>" . $row['date_returned'] . "</p>";
         ?>
           <tr>
             <td><?php echo $row['id']; ?></td>
@@ -63,10 +60,11 @@
           <?php if($row['date_returned'] == 0000-00-00): ?>
             <td><?php echo $not_returned; ?></td>
           <?php else: ?>
-            <td><?php echo $row['date_returned']; ?></td>
+            <td><?php echo $returned; ?></td>
           <?php endif; ?>
             <td>
               <a href="borrow.php?page=edit-borrower&edit=<?php echo $row['id']; ?>" class="btn btn-info">Return Book</a>
+              <a onclick="return confirm('Are you sure you want to delete this Borrower\'s record?')" href="borrow.php?delete=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a>
             </td>
           </tr>
         <?php endwhile; ?>
