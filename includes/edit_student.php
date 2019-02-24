@@ -48,6 +48,14 @@
                 </div>
                 <div class="form-group row">
                   <div class="col-sm-12">
+                    <label for="student_image">Profile Picture
+                    <input type="file" name="student_image" class="form-control-file"><br>
+                    <img src="img/<?php echo $student_image; ?>" height="150" alt="profile picture">
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-12">
                     <input type="submit" name="update" class="btn btn-primary btn-user btn-block" id="" value="Update">
                   </div>
                 </div>

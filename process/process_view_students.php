@@ -21,6 +21,7 @@
       $student_age = $row['student_age'];
       $student_address = $row['student_address'];
       $student_course = $row['student_course'];
+      $student_image = $row['student_image'];
     }
   }
 
@@ -31,7 +32,18 @@
     $student_address = $_POST['student_address'];
     $student_course = $_POST['student_course'];
 
-    $mysqli->query("UPDATE students SET student_name='$student_name', student_age='$student_age', student_address='$student_address', student_course='$student_course' WHERE id=$id") or
+    $student_image = $_FILES['student_image']['name'];
+    $student_image_temp = $_FILES['student_image']['tmp_name'];
+    move_uploaded_file($student_image_temp, "img/$student_image");
+
+    if(empty($student_image)){
+      $result = $mysqli->query("SELECT * FROM students WHERE id = $id") or die($mysqli->error());
+      while($row = $result->fetch_assoc()){
+        $student_image = $row['student_image'];
+      }
+    }
+
+    $mysqli->query("UPDATE students SET student_name='$student_name', student_age='$student_age', student_address='$student_address', student_course='$student_course', student_image='$student_image' WHERE id=$id") or
       die($mysqli->error());
 
       $_SESSION['message'] = "<strong>Student has been updated!</strong> <button type='button' class='close' data-dismiss='alert' aria-label='Close'> <span aria-hidden='true'>&times;</span> </button>";
