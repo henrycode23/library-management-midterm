@@ -7,10 +7,11 @@ if(isset($_POST['save'])){
   $date_returned = $_POST['date_returned'];
   
   // SELECT * FROM students a INNER JOIN borrow b ON a.student_name = b.borrower_student_name
-  $result = $mysqli->query("SELECT student_name FROM students WHERE student_name != '$borrower_student_name' ") or die($mysqli->error());
+  $result = $mysqli->query("SELECT student_name FROM students WHERE student_name = '$borrower_student_name' LIMIT 1 ") or die($mysqli->error());
   $count = mysqli_num_rows($result);
+  
 
-  if($count > 0){
+  if($count == 0){
     $_SESSION['message'] = "<strong>Fail to Record!</strong> <button type='button' class='close' data-dismiss='alert' aria-label='Close'> <span aria-hidden='true'>&times;</span> </button>";
     $_SESSION['msg_type'] = "danger";
     return false;

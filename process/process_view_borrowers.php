@@ -38,3 +38,10 @@
       $_SESSION['msg_type'] = "success";
 
   }
+
+  if(isset($_GET['return'])){
+    $id = $_GET['return'];
+  
+    $mysqli->query("UPDATE borrow SET date_returned = now() WHERE id = $id ") or die($mysqli->error());
+    
+  }

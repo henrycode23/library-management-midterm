@@ -63,7 +63,7 @@
             <td><?php echo $returned; ?></td>
           <?php endif; ?>
             <td>
-              <a href="borrow.php?page=edit-borrower&edit=<?php echo $row['id']; ?>" class="btn btn-info">Return Book</a>
+              <a onclick="return confirm('Are you sure book/s has already been returned?')" href="borrow.php?return=<?php echo $row['id']; ?>" class="btn btn-info">Returned</a>
               <a onclick="return confirm('Are you sure you want to delete this Borrower\'s record?')" href="borrow.php?delete=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a>
             </td>
           </tr>
