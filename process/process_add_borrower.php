@@ -3,7 +3,7 @@
 if(isset($_POST['save'])){
   $borrower_student_name = $_POST['borrower_student_name'];
   $borrower_book_name = $_POST['borrower_book_name'];
-  $date_borrowed = date('d-m-y');
+  $date_borrowed = $_POST['date_borrowed'];
   $date_returned = $_POST['date_returned'];
   
   // SELECT * FROM students a INNER JOIN borrow b ON a.student_name = b.borrower_student_name

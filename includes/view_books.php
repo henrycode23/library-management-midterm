@@ -29,20 +29,24 @@
         <thead>
           <tr>
             <th>Id</th>
+            <th>Book Cover</th>
             <th>Book Name</th>
             <th>Description</th>
             <th>Author</th>
             <th>Date Published</th>
+            <th>Quantity</th>
             <th>Action</th>
           </tr>
         </thead>
         <tfoot>
           <tr>
             <th>Id</th>
-            <th>book Name</th>
+            <th>Book Cover</th>
+            <th>Book Name</th>
             <th>Description</th>
             <th>Author</th>
             <th>Date Published</th>
+            <th>Quantity</th>
             <th>Action</th>
           </tr>
         </tfoot>
@@ -50,10 +54,12 @@
         <?php while($row = $result->fetch_assoc()): ?>
           <tr>
             <td><?php echo $row['id']; ?></td>
+            <td><a href="img/<?php echo $row['book_image']; ?>" target="_blank"><img src="img/<?php echo $row['book_image']; ?>" width="50" height="50"></a></td>
             <td><?php echo $row['book_name']; ?></td>
             <td><?php echo $row['book_desc']; ?></td>
             <td><?php echo $row['book_author']; ?></td>
             <td><?php echo $row['book_date_published']; ?></td>
+            <td><?php echo $row['book_quantity']; ?></td>
             <td>
               <a href="books.php?page=edit-book&edit=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a>
               <a onclick="return confirm('Are you sure you want to delete?')" href="books.php?delete=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a>

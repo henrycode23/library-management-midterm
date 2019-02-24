@@ -48,6 +48,19 @@
                 </div>
                 <div class="form-group row">
                   <div class="col-sm-12">
+                    <input type="number" name="book_quantity" value="<?php echo $book_quantity; ?>" class="form-control form-control-user" id="" placeholder="Book Quantity" required>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-12">
+                    <label for="book_image">Book Cover Image
+                    <input type="file" name="book_image" class="form-control-file"><br>
+                    <img src="img/<?php echo $book_image; ?>" height="150" alt="book cover picture">
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-12">
                     <input type="submit" name="update" class="btn btn-primary btn-user btn-block" id="" value="Update">
                   </div>
                 </div>

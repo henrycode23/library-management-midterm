@@ -47,6 +47,18 @@
                 </div>
                 <div class="form-group row">
                   <div class="col-sm-12">
+                    <input type="number" name="book_quantity" class="form-control form-control-user" id="" placeholder="Book Quantity" required>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-12">
+                    <label for="book_image">Book Cover Image
+                    <input type="file" name="book_image" class="form-control-file">
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-12">
                     <input type="submit" name="save" class="btn btn-primary btn-user btn-block" id="" value="Save">
                   </div>
                 </div>
