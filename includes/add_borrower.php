@@ -1,8 +1,8 @@
-<?php require_once "process/process_add_borrower.php"; ?>
+<?php require_once "process/process_view_borrowers.php"; ?>
 
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-  <h1 class="h3 mb-0 text-gray-800">Add Borrower</h1>
+  <h1 class="h3 mb-0 text-gray-800">Borrow Form</h1>
 </div>
 
 <?php if(isset($_SESSION['message'])): ?>
@@ -32,7 +32,7 @@
                 </div>
                 <div class="form-group row">
                   <div class="col-sm-12">
-                    <input type="text" name="borrower_book_name" class="form-control form-control-user" id="" placeholder="Book Name" required>
+                    <input type="text" name="borrower_book_name" value="<?php echo $book_name; ?>" class="form-control form-control-user" id="" placeholder="Book Name" readonly>
                   </div>
                 </div>
                 <div class="form-group row">
@@ -47,7 +47,12 @@
                 </div>
                 <div class="form-group row">
                   <div class="col-sm-12">
-                    <input type="submit" name="save" class="btn btn-primary btn-user btn-block" id="" value="Borrow">
+                    <input type="hidden" name="book_quantity" class="form-control form-control-user" id="" placeholder="Book Quantity" required>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-12">
+                    <input type="submit" name="borrow" class="btn btn-primary btn-user btn-block" id="" value="Borrow">
                   </div>
                 </div>
               </form>

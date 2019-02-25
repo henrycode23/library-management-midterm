@@ -34,7 +34,7 @@
             <th>Description</th>
             <th>Author</th>
             <th>Date Published</th>
-            <th>Quantity</th>
+            <th>Qty</th>
             <th>Action</th>
           </tr>
         </thead>
@@ -46,7 +46,7 @@
             <th>Description</th>
             <th>Author</th>
             <th>Date Published</th>
-            <th>Quantity</th>
+            <th>Qty</th>
             <th>Action</th>
           </tr>
         </tfoot>
@@ -59,8 +59,13 @@
             <td><?php echo $row['book_desc']; ?></td>
             <td><?php echo $row['book_author']; ?></td>
             <td><?php echo $row['book_date_published']; ?></td>
-            <td><?php echo $row['book_quantity']; ?></td>
-            <td>
+            <td class="text-center"><?php echo $row['book_quantity']; ?></td>
+            <td style="min-width: 220px;">
+            <?php if($row['book_quantity'] == 0): ?>
+              <a href="borrow.php?page=add-borrower&borrow=<?php echo $row['id']; ?>" class="btn btn-info disabled">Borrow</a>
+            <?php else: ?>
+              <a href="borrow.php?page=add-borrower&borrow=<?php echo $row['id']; ?>" class="btn btn-info">Borrow</a>
+            <?php endif; ?>
               <a href="books.php?page=edit-book&edit=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a>
               <a onclick="return confirm('Are you sure you want to delete?')" href="books.php?delete=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a>
             </td>
