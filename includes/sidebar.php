@@ -58,19 +58,11 @@
 <!-- Divider -->
 <hr class="sidebar-divider my-0">
 
-<!-- Nav Item - Pages Collapse Menu -->
+<!-- Nav Item - Dashboard -->
 <li class="nav-item">
-  <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBorrow" aria-expanded="true" aria-controls="collapseBorrow">
+  <a class="nav-link" href="borrow.php">
     <i class="fas fa-fw fa-book"></i>
-    <span>Borrow</span>
-  </a>
-  <div id="collapseBorrow" class="collapse" aria-labelledby="headingBorrow" data-parent="#accordionSidebar">
-    <div class="bg-white py-2 collapse-inner rounded">
-      <h6 class="collapse-header">Manage Borrowers:</h6>
-      <a class="collapse-item" href="borrow.php?page=add-borrower">Borrow Book</a>
-      <a class="collapse-item" href="borrow.php">Borrowed Records</a>
-    </div>
-  </div>
+    <span>Borrowed Records</span></a>
 </li>
 
 <!-- Divider -->
