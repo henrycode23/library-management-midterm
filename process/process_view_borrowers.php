@@ -30,7 +30,7 @@ if(isset($_POST['borrow'])){
 
   $mysqli->query("INSERT INTO borrow (borrower_student_name, borrower_book_name, date_borrowed, date_returned) VALUES ('$borrower_student_name', '$borrower_book_name', now(), '$date_returned')") or
     die($mysqli->error());
-  $mysqli->query("UPDATE books SET book_quantity = $book_quantity - 1");
+  $mysqli->query("UPDATE books SET book_quantity = $book_quantity - 1 WHERE id = $id");
 
     $_SESSION['message'] = "<strong>Borrower has been updated!</strong> <button type='button' class='close' data-dismiss='alert' aria-label='Close'> <span aria-hidden='true'>&times;</span> </button>";
     $_SESSION['msg_type'] = "success";
@@ -40,5 +40,11 @@ if(isset($_POST['borrow'])){
 if(isset($_GET['return'])){
   $id = $_GET['return'];
 
-  $mysqli->query("UPDATE borrow SET date_returned = now() WHERE id = $id") or die($mysqli->error());
+  $mysqli->query("UPDATE borrow SET date_returned = now() AND books SET book_quantity = $book_quantity + 1 WHERE id = $id") or die($mysqli->error());
+
+//  $mysqli->query("UPDATE books SET book_quantity = $book_quantity + 1 WHERE id = $id") or die($mysqli->error());
+}
+
+if(isset($_POST['return_button'])){
+  
 }
